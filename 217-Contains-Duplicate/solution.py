@@ -4,11 +4,4 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        numbers_map = {}
-        for num in nums:
-            try:
-                numbers_map[num] += 1
-                return True
-            except KeyError:
-                numbers_map[num] = 1
-        return False
+        return len(nums) != len(set(nums))
