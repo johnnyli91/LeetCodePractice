@@ -1,4 +1,4 @@
-import string
+import re
 
 class Solution(object):
     def isPalindrome(self, s):
@@ -6,9 +6,6 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        excluded_values = list(string.punctuation)
-        excluded_values.append(" ")
-        cleaned_string_value = [letter for letter in s if letter not in excluded_values]
-        cleaned_string = "".join(cleaned_string_value).lower()
+        cleaned_string = "".join(re.findall("[a-zA-Z0-9]+", s)).lower()
         return cleaned_string == cleaned_string[::-1]
         
