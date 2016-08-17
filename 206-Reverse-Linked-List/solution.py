@@ -12,12 +12,11 @@ class Solution(object):
         """
         if not head:
             return head
-        fast_pointer = head
         new_list = ListNode(head.val)
-        while fast_pointer.next:
+        while head.next:
             old_list = new_list
-            fast_pointer = fast_pointer.next
-            new_list = ListNode(fast_pointer.val)
+            head = head.next
+            new_list = ListNode(head.val)
             new_list.next = old_list
         return new_list
         
