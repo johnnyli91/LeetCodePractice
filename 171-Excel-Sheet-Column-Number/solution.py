@@ -37,4 +37,3 @@ class Solution(object):
         for index, letter in enumerate(s[::-1]):
             column_number += pow(LETTERS_IN_ALPHABET, index) * LETTER_TO_NUMBER_LEGEND[letter]
         return column_number
-            
