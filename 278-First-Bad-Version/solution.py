@@ -19,5 +19,6 @@ class Solution(object):
             else:
                 start = midpoint + 1
             if start == end:
-                return start
+                found = True
+        return start
         
